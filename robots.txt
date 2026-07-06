@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mediapetti.com/sitemap.xml
