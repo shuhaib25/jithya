@@ -237,3 +237,45 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+/**
+ * Google Sheets Contact Form Handler
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  const forms = document.querySelectorAll('.google-sheet-form');
+  
+  forms.forEach(function(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const thisForm = this;
+      const action = thisForm.getAttribute('action');
+      
+      if (!action || action === 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL') {
+        alert('Please update the form action URL with your Google Script Web App URL.');
+        return;
+      }
+      
+      thisForm.querySelector('.loading').classList.add('d-block');
+      thisForm.querySelector('.error-message').classList.remove('d-block');
+      thisForm.querySelector('.sent-message').classList.remove('d-block');
+      
+      const formData = new FormData(thisForm);
+      
+      fetch(action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Use no-cors to avoid CORS issues with Google Scripts
+      })
+      .then(() => {
+        thisForm.querySelector('.loading').classList.remove('d-block');
+        thisForm.querySelector('.sent-message').classList.add('d-block');
+        thisForm.reset();
+      })
+      .catch((error) => {
+        thisForm.querySelector('.loading').classList.remove('d-block');
+        thisForm.querySelector('.error-message').innerHTML = 'An error occurred. Please try again.';
+        thisForm.querySelector('.error-message').classList.add('d-block');
+      });
+    });
+  });
+});

@@ -1,4 +1,4 @@
-/**
+﻿/**
 * Template Name: Craftivo
 * Template URL: https://bootstrapmade.com/craftivo-bootstrap-portfolio-template/
 * Updated: Oct 04 2025 with Bootstrap v5.3.8
@@ -91,7 +91,7 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+.google-sheet-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -101,7 +101,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.google-sheet-form .sent-message {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -111,7 +111,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .loading {
+.google-sheet-form .loading {
   display: none;
   background: var(--surface-color);
   text-align: center;
@@ -119,7 +119,7 @@ h6 {
   margin-bottom: 24px;
 }
 
-.php-email-form .loading:before {
+.google-sheet-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -859,6 +859,11 @@ section,
 
   .hero p {
     font-size: 20px;
+  }
+
+  .hero img {
+    object-fit: contain;
+    object-position: top center;
   }
 }
 
@@ -2219,14 +2224,14 @@ section,
   color: var(--default-color);
 }
 
-.contact .php-email-form {
+.contact .google-sheet-form {
   background: var(--surface-color);
   padding: 40px;
   border-radius: 10px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.contact .php-email-form .form-control {
+.contact .google-sheet-form .form-control {
   color: var(--default-color);
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
@@ -2236,20 +2241,20 @@ section,
   transition: 0.3s;
 }
 
-.contact .php-email-form .form-control:focus {
+.contact .google-sheet-form .form-control:focus {
   border-color: var(--accent-color);
   box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.contact .php-email-form .form-control::placeholder {
+.contact .google-sheet-form .form-control::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form textarea.form-control {
+.contact .google-sheet-form textarea.form-control {
   min-height: 120px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .google-sheet-form button[type=submit] {
   background: var(--accent-color);
   color: var(--contrast-color);
   border: none;
@@ -2261,7 +2266,7 @@ section,
   transition: 0.3s;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .google-sheet-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   transform: translateY(-2px);
 }
@@ -2285,7 +2290,7 @@ section,
     font-size: 16px;
   }
 
-  .contact .php-email-form {
+  .contact .google-sheet-form {
     padding: 30px 20px;
   }
 }
@@ -3128,7 +3133,7 @@ section,
 }
 
 .service-details .testimonial-section .testimonial-card blockquote::before {
-  content: "“";
+  content: "â€œ";
   position: absolute;
   left: 0;
   top: -10px;
@@ -3398,7 +3403,7 @@ section,
 }
 
 .terms-of-service .tos-content .content-section .disclaimer-box ul li::before {
-  content: "•";
+  content: "â€¢";
   position: absolute;
   left: 8px;
   color: var(--accent-color);
